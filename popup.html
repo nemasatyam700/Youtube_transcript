@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+        <h1>Youtube Video Transcript Summarizer</h1>
+    <body>
+         <div class="wrap">
+        <img src="images/icon.png" alt="Paris" class="center">
+            <button class="btn" id ="summarise" type="submit">
+                <span>Summarize</span>
+            </button>
+        <div class="myDiv"></div>
+         </div>
+</body>
+       <style>
+          body {
+    font-family: sans-serif;
+  }
+h1{
+    text-align: center;
+  }
+  body {
+                width: max-content;
+                max-width: 400px;
+            }
+  * {
+    box-sizing: border-box;
+  }
+
+  .btn {
+    position: relative;
+
+    display: block;
+    margin: 5px auto 15px;
+    padding: 0;
+    width:100%;
+
+    overflow: hidden;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+    background-color: lightred;
+    color: darkblack;
+
+    transition: background-color .3s;
+  }
+  .center {
+  display: block;
+  padding: 10px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+  .btn:hover, .btn:focus {
+    background-color: red;
+  }
+
+  .btn > * {
+    position: relative;
+  }
+
+  .btn span {
+    display: block;
+    padding: 12px 24px;
+  }
+
+  .btn:before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+
+    border-radius: 100%;
+
+    background-color: rgba(236, 240, 241, .3);
+
+  }
+
+  .btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+            button[disabled] {
+                background-color: lightcoral;
+                color: white;
+                border-radius: 8px;
+                width: max-content;
+                height: max-content;
+                padding: 10px;
+                font-size: large;
+                margin: auto;
+                display: block;
+                border-color: lightpink;
+            }
+            p {
+                font-size: medium;
+            }
+            .myDiv {
+  border: 7px outset lightblue;
+  background-color: lightblue;
+  font:message-box ;
+  text-align:justify;
+  font-family:cursive
+}
+        </style>
+
+        <p id="output"></p>
+        <script src="popup.js"></script>
+
+</html>
